@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/3.0.0/jquery.waypoints.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.0/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <script src="../js/script.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="../html/index.html"><img src="../img/logo.png" alt="logo"></a></div>
+            <ul class="menu">
+                <li><a href="../html/index.html">Главная</a></li>
+                <li><a href="../html/aboutme.html">Обо мне</a>
+                    <ul>
+                        <li><a href="../html/skills.html">Мои навыки</a></li>
+                        <li><a href="../html/myworks.html">Мои работы</a></li>
+                    </ul>
+                </li>
+                <li><a href="../html/contacts.html">Контакты</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <form>
+            <div class="form__item">
+            <i>Тема</i><br>
+            <select name="topic" id="topic">
+            <option value="1">Заказать услугу</option>
+            <option value="2">Оставить отзыв/замечание</option>
+            <option value="3">Предложить сотрудничество</option>
+            <option value="4">Другое</option>
+            </select>
+            </div>
+            <div class="form__item">
+            <i>Имя</i><br>
+            <input type="text" required>
+            </div>
+            <div class="form__item">
+            <i>E-mail</i><br>
+            <input type="email">
+            </div>
+            <div class="form__item">
+            <i>Текст сообщения</i><br>
+            <textarea name="textarea" id="textarea" cols="30" rows="10" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-success"><i>ОТПРАВИТЬ</i></button>
+            </form>
+    </nav>
+    <a href="https://discord.gg/87A8bUGV"><img src="../img/dis.png" style="width: 60px; margin-top: 650px; margin-left: 850px;"></a>
+    <a href="https://discord.gg/87A8bUGV"><img src="../img/tgg.png" style="width: 60px; margin-top: 650px; margin-left: 25px;"></a>
+    <a href="https://vk.com/vadick74"><img src="../img/vk.png" style="width: 60px; margin-top: 650px; margin-left: 25px;"></a>
+    <video autoplay muted loop id="myVideo">
+        <source src="../img/bg.mp4" type="video/mp4">
+        </video>
+</body>
+</html>

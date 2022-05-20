@@ -1,0 +1,424 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+#myVideo {
+    position: fixed;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.menu-btn{
+    color:#fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar li ul{
+    position:absolute;
+    display: none;
+    padding: 7px;
+}
+.navbar ul li{
+padding: 7px;
+}
+.navbar li:hover ul{
+    display: block;
+}
+.navbar li:hover li{
+    display: block;
+}
+.navbar .logo a{
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar.sticky{
+    padding: 15px 0;
+}
+.navbar.sticky .logo a span{
+    color: #fff;
+    transition: all 0.3s ease;
+}
+.navbar.sticky .menu li a:hover{
+    color: #fff;
+}
+.navbar .logo a span{
+    color: cyan;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    color:#fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: gray
+}
+.home{
+    display: flex;
+    height: 100vh;
+    color:#fff;
+    min-width: 500px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.home .home-content a{
+   display: inline-block;
+   color: #fff;
+   font-size: 25px;
+   padding: 12px 36px;
+   margin-top: 20px;
+   border-radius: 6px;
+   border: 2px solid white;
+   transition: all 0.3s ease;
+}
+.home .home-content a:hover{
+ color: black;
+ background: white;
+}
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+.home .home-content .text-1{
+font-size: 27px;
+}
+.home .home-content .text-2{
+font-size: 75px;
+font-weight: 600;
+margin-left: -3px;
+}
+.home .home-content .text-3{
+font-size: 40px;
+margin: 5px 0;
+}
+.home .home-content .text-3 span{
+    font-weight: 500;
+}
+.about{
+    font-family: 'Poppins', sans-serif;
+    color:white;
+}
+.slider{
+    position: absolute;
+    width: 500px;
+    justify-content: center;
+    margin-left: 690px;
+    margin-top: 150px;
+}
+.slides-item {
+    width: 100px;
+    z-index: 1;
+}
+#left-button, #right-button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50% );
+    color: black;
+    font-size: 30px;
+}
+#left-button{
+    left:0;
+}
+#right-button{
+    right: 0;
+}
+.dots-block{
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+}
+.dots-item{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 7px;
+    background: white;
+    cursor: pointer;
+}
+.dots-item:last-child{
+    margin: 0;
+}
+.active{
+background: blue;
+}
+.slider{
+    max-width: 90%;
+    position: relative;
+    height: 300px;
+    margin-bottom: 15px;
+}
+/* Картинка мастабируется по отношению к родительскому элементу */
+.slider .item img {
+    width: 100%;
+    height: 300px;
+    border: none !important;
+    box-shadow: none !important;
+}
+/* Кнопки вперед и назад */
+.slider .prev, .slider .next {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+.slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+/* При наведении на кнопки добавляем фон кнопок */
+.slider .prev:hover,
+.slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/* Заголовок слайда */
+.slideText {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    color: white;
+    font-size: 23px;
+}
+/* Кружочки */
+.slider-dots {
+    text-align: center;
+}
+.slider-dots_item{
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active,
+.slider-dots_item:hover {
+    background-color: #aaa;
+}
+/* Анимация слайдов */
+.slider .item {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+.form__item{
+    color: white;
+    margin-left: 840px;
+    padding: 10px;
+}
+.btn{
+    margin-left: 850px;
+    background: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 15px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    color: black;
+    background: white;
+}
+.main_bl{
+    color:white;
+    margin-top: 400px;
+    margin-left: 800px;
+    font-size: 30px;
+}
+section {
+    padding: 100px 0;
+}
+.about .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-top: 80px;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.about .title::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    bottom: 0px;
+    left: 50%;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+.about .title::after {
+    content: "кто я?";
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    font-size: 20px;
+    color: white;
+    padding: 5px;
+    transform: translateX(-50%);
+}
+.about .about-content .left img{
+     height: 550px;
+     width: 400px;
+     object-fit: cover;
+}
+.about .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about .about-content .right {
+    width: 55%;
+}
+.about .about-content .right .text{
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about .about-content .right p{
+    text-align: justify;
+}
+.about .about-content .column {
+    width: 50%;
+}
+.about .about-content .left {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px;
+}
+@media (max-width: 1104px){
+    .home .max-width{
+        margin-left: 0;
+    }
+}
+@media (max-width: 991px){
+    .max-width{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 947px) {
+    .max-width{
+        padding: 0 50px;
+    }
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu.active {
+        left: 0;
+    }
+    .navbar .menu li {
+        display: inline-block;
+    }
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .text-2{
+        font-size: 75px;
+    }
+    .home .home-content .text-3{
+        font-size: 35px;
+    }
+    .home .home-content a {
+        font-size: 23px;
+        padding: 10px 30px; 
+    }
+}
+@media (max-width: 690px){
+    .max-width{
+        padding: 0 23px;
+    }
+    .home .home-content .text-2 {
+    font-size: 60px;
+    }
+    .home .home-content .text-3 {
+        font-size: 32px;
+    }
+    .home .home-content a {
+        font-size: 20px;
+        padding: 8px 25px; 
+    }
+}
+@media (max-width: 500px){
+    .home .home-content .text-2 {
+    font-size: 50px;
+    }
+    .home .home-content .text-3 {
+        font-size: 27px;
+    }
+}
